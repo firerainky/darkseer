@@ -8,6 +8,7 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		String version = System.getProperty("java.version");
+		System.out.println("Java version: " + version);
 	}
-
 }
