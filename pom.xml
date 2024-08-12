@@ -12,6 +12,7 @@
         <module>library</module>
         <module>application</module>
         <module>fragments</module>
+        <module>healthycoderapp</module>
     </modules>
 
 </project>
