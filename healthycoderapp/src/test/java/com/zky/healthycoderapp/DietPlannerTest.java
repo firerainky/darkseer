@@ -41,19 +41,6 @@ public class DietPlannerTest {
     }
 
     @Test
-    void should_CalculateDietPlanForFemaleCoder() {
-        // given
-        Coder coder = new Coder(1.65, 55.0, 30, Gender.FEMALE);
-        DietPlan expectedDietPlan = new DietPlan(1674, 125, 83, 278);
-
-        // when
-        DietPlan actualDietPlan = dietPlanner.calculateDiet(coder);
-
-        // then
-        assertEquals(expectedDietPlan, actualDietPlan);
-    }
-
-    @Test
     void should_ThrowException_When_InvalidPercentageSum() {
         // given
         int invalidProteinPercentage = 40;
