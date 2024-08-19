@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ApartmentRater {
 
-	private static final BigDecimal CHEAP_THRESHOLD = new BigDecimal(6000.0);
+	private static final BigDecimal CHEAP_THRESHOLD = new BigDecimal(4000.0);
 	private static final BigDecimal MODERATE_THRESHOLD = new BigDecimal(8000.0);
 	
 	public static int rateApartment(Apartment apartment) {
