@@ -1,5 +1,9 @@
 # Healthy Coder App with testing in JUnit5
 
+From a Java Unit testing course on Udemy
+
+<https://www.udemy.com/course/junit5-for-beginners/>
+
 ## Testing tips
 
 - Test a method repeated with `@RepeatedTest`
