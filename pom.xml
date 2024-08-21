@@ -14,6 +14,7 @@
         <module>fragments</module>
         <module>healthycoderapp</module>
         <module>realestateapp</module>
+        <module>HappyHotelApp</module>
     </modules>
 
 </project>
