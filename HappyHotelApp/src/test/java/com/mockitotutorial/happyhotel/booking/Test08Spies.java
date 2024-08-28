@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+// With spy, we can call the real method of the object, but we can also stub the method
 public class Test08Spies {
 
     private BookingService bookingService;
