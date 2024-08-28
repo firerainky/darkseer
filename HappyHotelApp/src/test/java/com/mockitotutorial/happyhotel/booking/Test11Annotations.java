@@ -18,7 +18,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class Test10Annotations {
+public class Test11Annotations {
 
     @InjectMocks
     private BookingService bookingService;
