@@ -15,6 +15,7 @@
         <module>healthycoderapp</module>
         <module>realestateapp</module>
         <module>HappyHotelApp</module>
+        <module>HappyHotelAppSpringBoot</module>
     </modules>
 
 </project>
