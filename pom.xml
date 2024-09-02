@@ -16,6 +16,7 @@
         <module>realestateapp</module>
         <module>HappyHotelApp</module>
         <module>HappyHotelAppSpringBoot</module>
+        <module>JavaBestPracticesSourceCode</module>
     </modules>
 
 </project>
