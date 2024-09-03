@@ -2,7 +2,7 @@ package datatypes.primitives;
 
 public class PrimitivesSample {
 
-    static Integer internalNumber;
+    static int internalNumber;
 
     public static void main(String[] args) {
 
@@ -40,9 +40,4 @@ public class PrimitivesSample {
         }
         System.out.println("Final number: " + sum);
     }
-
-    private static boolean areEqual(int a) {
-        return a == 42;
-    }
-
 }
