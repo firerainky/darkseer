@@ -11,11 +11,12 @@ class MyThreadTest {
     private CountDownLatch latch = new CountDownLatch(2);
 
     @Test
-    public void testMyThreadExecution() throws InterruptedException {
+    void testMyThreadExecution() throws InterruptedException {
         // The thread creation technique called anonymous inner class.
         // This is a common approach in Java to customize the behavior a class without needing to create a seperate subclass.
         // In this scenario, we use this mechanism to encapsulate the behavior of the thread within the test method.
         // This approach is simple, flexible and easy to maintain compared to creating a seperate subclass.
+        // And we can use subclass approach in the MyThreadTestSubclass file.
         MyThread thread1 = new MyThread("Thread 1") {
             @Override
             public void run() {
