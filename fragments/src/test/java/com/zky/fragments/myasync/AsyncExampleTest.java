@@ -15,6 +15,19 @@ class AsyncExampleTest {
         assertEquals(1, callback.callCount);
     }
 
+    @Test
+    void test_asyncTask_shouldReturnCorrectly() throws InterruptedException {
+        PlusOneStub callback = new PlusOneStub();
+        AsyncExample example = new AsyncExample(callback);
+
+        example.asyncTask();
+
+        Thread.sleep(100);
+
+        assertEquals(1, callback.callCount);
+        assertEquals(2, example.number);
+    }
+
     class PlusOneStub implements PlusOneCallback {
         int callCount = 0;
 
