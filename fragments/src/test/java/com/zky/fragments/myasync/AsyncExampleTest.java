@@ -28,6 +28,18 @@ class AsyncExampleTest {
         assertEquals(2, example.number);
     }
 
+    @Test
+    void test_nonBlockingAsyncTask() throws InterruptedException {
+        PlusOneStub callback = new PlusOneStub();
+        AsyncExample example = new AsyncExample(callback);
+
+        example.nonBlockingAsyncTask();
+
+        // Thread.sleep(100);
+
+        // assertEquals(1, callback.callCount);
+    }
+
     class PlusOneStub implements PlusOneCallback {
         int callCount = 0;
 

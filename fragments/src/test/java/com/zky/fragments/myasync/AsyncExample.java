@@ -26,4 +26,11 @@ class AsyncExample {
         // future.join();
         System.out.println("Async task completed");
     }
+
+    void nonBlockingAsyncTask() {
+        CompletableFuture.runAsync(() -> {
+            completion.plus(1);
+            System.out.println("Non-blocking async task completed");
+        });
+    }
 }
