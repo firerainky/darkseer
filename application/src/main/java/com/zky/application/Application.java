@@ -1,23 +1,26 @@
 package com.zky.application;
 
+import java.util.concurrent.CompletableFuture;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.concurrent.CompletableFuture;
 
+import com.zky.application.aop.ExampleService;
 import com.zky.library.MyService;
 
 
-@SpringBootApplication(scanBasePackages = "com.zky.library")
+@SpringBootApplication(scanBasePackages = {"com.zky.library", "com.zky.application"})
 @RestController
 public class Application {
 
-	private final MyService myService;
+	@Autowired
+	private MyService myService;
 
-	public Application(MyService myService) {
-		this.myService = myService;
-	}
+	@Autowired
+	private ExampleService exampleService;
 
 	@GetMapping("/")
 	public String home() {
@@ -53,6 +56,11 @@ public class Application {
 			return null;
 		});
 		return myService.message();
+	}
+
+	@GetMapping("/aop")
+	public void aop() {
+		exampleService.doSomething();
 	}
 
 	public static void main(String[] args) {
