@@ -35,4 +35,13 @@ class ApplicationTests {
 		// If we want the code async task being executed, comment below line to wait aysnc task being finished.
 		// Thread.sleep(2000);
 	}
+
+	@Test
+	void test_aop_correctlyGetHeadersInRequest() throws Exception {
+		ResultActions actions = mockMvc
+                .perform(MockMvcRequestBuilders.get("/aop").header("author", "zky"));
+
+		actions.andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(print());
+	}
 }
