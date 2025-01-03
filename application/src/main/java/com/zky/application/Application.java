@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import com.zky.library.MyService;
 
 @SpringBootApplication(scanBasePackages = {"com.zky.library", "com.zky.application"})
 @RestController
+@EnableAsync(proxyTargetClass = true)
 public class Application {
 
 	@Autowired

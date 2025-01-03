@@ -8,10 +8,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class AsyncServiceTests {
 
     @Autowired
-    private AsyncService sut;
+    private AsyncServiceImpl sut;
 
     @Test
     public void notifyUser() {
+        doSomething();
+        System.out.println("Something good happened");
+    }
+
+    private void doSomething() {
         sut.notifyUser();
+        System.out.println("Something better happened");
     }
 }
