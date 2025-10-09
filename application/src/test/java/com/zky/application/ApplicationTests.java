@@ -44,4 +44,13 @@ class ApplicationTests {
 		actions.andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(print());
 	}
+
+	@Test
+	void test_accessANotExistEndpoint_shouldReturn404() throws Exception {
+		ResultActions actions = mockMvc
+                .perform(MockMvcRequestBuilders.post("/aop"));
+
+		actions.andExpect(MockMvcResultMatchers.status().isNotFound())
+                .andDo(print());
+	}
 }
